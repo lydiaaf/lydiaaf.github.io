@@ -1,5 +1,6 @@
 window.onload = function() {
 
+
     Vue.component('demo-grid', {
         template: '#grid-template',
         props: {
