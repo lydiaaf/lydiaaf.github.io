@@ -66,19 +66,19 @@ new Vue({
     el: '#ll',
     data: { activetab: 1 ,
         searchQuery: '',
-              gridColumns: ['name', 'power'],
+              gridColumns: ['name', 'phone'],
               gridData: [
-                { name: 'Chuck Norris', power: Infinity },
-                { name: 'Bruce Lee', power: 9000 },
-                { name: 'Jackie Chan', power: 7000 },
-                { name: 'Jet Li', power: 8000 }
+                { name: 'Chuck Norris',phone: Infinity },
+                { name: 'Bruce Lee', phone: 9000 },
+                { name: 'Jackie Chan', phone: 7000 },
+                { name: 'Jet Li', phone: 8000 }
               ]
 
          },
          methods: { 
            
           insert: function () { 
-          var person = {name:this.name , power:this.power};
+          var person = {name:this.name , phone:this.phone};
           this.gridData.push(person);
         }
           
