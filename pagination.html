@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+    <script src=pagination.js></script>
+
+<div id="ll">
+
+<table>
+<tr v-for="k in table">
+<td>{{k.name}}</td>
+<td>{{k.phone}}</td>
+</tr>
+</table>
+<button v-on:click="insert()">insert</button>
+<input v-model="name1" placeholder="edit me">
+<input v-model="phone1" placeholder="edit me">
+<!--<button v-on:click="previous">previous</button>
+<button v-on:click="next">next</button>-->
+
+
+
+</div>
+</body>
+</html>

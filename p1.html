@@ -1,0 +1,37 @@
+<html>
+
+<head></head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+<script src="p1.js"></script>
+
+<div id="app">
+  
+    <table>
+      <thead>
+        <tr>
+          <th @click="sort('name')">Name</th>
+          <th @click="sort('age')">Age</th>
+          <th @click="sort('breed')">Breed</th>
+          <th @click="sort('gender')">Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="cat in sortedCats">
+          <td>{{cat.name}}</td>
+          <td>{{cat.age}}</td>
+          <td>{{cat.breed}}</td>
+          <td>{{cat.gender}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+    <button @click="prevPage">Previous</button> 
+    <button @click="nextPage">Next</button>
+    </p>
+    
+    debug: sort={{currentSort}}, dir={{currentSortDir}}, page={{currentPage}}
+  </div>
+</body>
+
+  </html>
