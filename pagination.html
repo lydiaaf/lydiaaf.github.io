@@ -8,19 +8,40 @@
 
 <div id="ll">
 
-<table>
-<tr v-for="k in table">
-<td>{{k.name}}</td>
-<td>{{k.phone}}</td>
-</tr>
-</table>
-<button v-on:click="insert()">insert</button>
-<input v-model="name1" placeholder="edit me">
-<input v-model="phone1" placeholder="edit me">
-<!--<button v-on:click="previous">previous</button>
-<button v-on:click="next">next</button>-->
+
+    <div id="tabs" class="container">
+  
+             <div class="tabs">
+                <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">Tab 1</a>
+                <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">Tab 2</a>
+                    
+             </div>
+            
+                <div class="content">
+                    <div v-if="activetab === 1" class="tabcontent">
+                        Content for tab one
+                        <table>
+                        <tr v-for="k in table">
+                        <td>{{k.name}}</td>
+                        <td>{{k.phone}}</td>
+                        </tr>
+                        </table>
+
+                    </div>
+                    <div v-if="activetab === 2" class="tabcontent">
+                        Content for tab two
+                        <button v-on:click="insert()">insert</button>
+                        <input v-model="name1" placeholder="edit me">
+                        <input v-model="phone1" placeholder="edit me">
+                        <!--<button v-on:click="previous">previous</button>
+                        <button v-on:click="next">next</button>-->
 
 
+                    </div>
+                        
+                </div>
+
+    </div>
 
 </div>
 </body>

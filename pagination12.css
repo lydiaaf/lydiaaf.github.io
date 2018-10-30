@@ -1,0 +1,29 @@
+
+body {
+    background-color: rgb(228, 220, 236);
+}
+table {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 10px;
+    background-color: rgb(204, 235, 232);
+}
+table, th, td {
+   border: 1px solid rgb(160, 157, 157);
+}
+.button {
+    background-color: rgb(205, 243, 241); /* Green */
+    border: none;
+    color: white;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}

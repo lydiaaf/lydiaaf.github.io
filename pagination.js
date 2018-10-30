@@ -9,6 +9,7 @@ new Vue({
             {name:'Chuck Norris2',phone:9002}
 
         ],
+        activetab: 1 ,
         name1:'',
         phone1:'',
         table1:[],

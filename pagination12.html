@@ -1,0 +1,68 @@
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="pagination12.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+    <script src=pagination12.js></script>
+    
+
+<div id="ll">
+<div id="tabs" class="container">
+  
+    <div class="tabs">
+       <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">Tab 1</a>
+       <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">Tab 2</a>
+       <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]">Tab 3</a>
+           
+    </div>
+   
+       <div class="content">
+           <div v-if="activetab === 1" class="tabcontent">
+               Content for tab one
+
+               <button class="button" v-on:click="insert()">insert</button>
+                <input v-model="name1" placeholder="edit me">
+                <input v-model="phone1" placeholder="edit me">
+               
+
+           </div>
+           <div v-if="activetab === 2" class="tabcontent">
+               Content for tab two
+               <table>
+                <tr v-for="k in table1">
+                <td>{{k.name}}</td>
+                <td>{{k.phone}}</td>
+                </tr>
+                </table>
+                
+                <button class="button"v-on:click="previous">previous</button>
+                <button class="button"v-on:click="next">next</button>
+
+                
+                
+
+           </div>
+           <div v-if="activetab === 3" class="tabcontent">
+            Content for tab three
+            
+
+             <input v-model="search1" placeholder="edit me">
+             <button class="button"v-on:click="search2">search</button>
+             <table>
+                <tr v-for="i in table2">
+                <td>{{i.name}}</td>
+                <td>{{i.phone}}</td>
+                </tr>
+                </table>
+
+        </div>
+               
+       </div>
+
+</div>
+
+</div>
+</body>
+</html>
