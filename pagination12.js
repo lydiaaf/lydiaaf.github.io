@@ -31,7 +31,7 @@ window.onload = function () {
         var len = this.table.length
         for (var i = len-1; i>=0; i--){
           for(var j = 1; j<=i; j++){
-            if(this.table[j-1].nme>this.table[j].name){
+            if(this.table[j-1].name>this.table[j].name){
                 var temp = table[j-1]
                 this.table[j-1] = this.table[j]
                 this.table[j] = temp
