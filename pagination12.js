@@ -24,12 +24,29 @@ window.onload = function () {
       maxsize: 0,
       maxpages: 0
     },
+
+
     methods: {
+      bubbleSort: function(){
+        var len = this.table.length
+        for (var i = len-1; i>=0; i--){
+          for(var j = 1; j<=i; j++){
+            if(this.table[j-1].nme>this.table[j].name){
+                var temp = table[j-1]
+                this.table[j-1] = this.table[j]
+                this.table[j] = temp
+             }
+          }
+        }
+        
+        this.activepage=0
+        this.pagination()
+     },
       search2: function(){
       for(i of this.table){
-      if (i.name.include(this.search1)){
+      if (i.name.includes(this.search1)){
       this.table2.push(i)
-      console.log(table2)
+      console.log(this.table2)
       }
       }
      },
