@@ -28,17 +28,17 @@ window.onload = function () {
 
     methods: {
       bubbleSort: function(){
-        var len = this.table.length
+        var len = this.table.length;
         for (var i = len-1; i>=0; i--){
           for(var j = 1; j<=i; j++){
-            if(this.table[j-1].name>this.table[j].name){
-                var temp = table[j-1]
-                this.table[j-1] = this.table[j]
-                this.table[j] = temp
+            if(this.table[j-1].name.toUpperCase()>this.table[j].name.toUpperCase()){
+                var temp = this.table[j-1];
+                this.table[j-1] = this.table[j];
+                this.table[j] = temp;
              }
           }
         }
-        
+        console.log(this.table)
         this.activepage=0
         this.pagination()
      },
