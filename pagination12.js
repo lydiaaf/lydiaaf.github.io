@@ -43,6 +43,7 @@ window.onload = function () {
         this.pagination()
      },
       search2: function(){
+        this.table2=[];
       for(i of this.table){
       if (i.name.includes(this.search1)){
       this.table2.push(i)

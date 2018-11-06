@@ -1,6 +1,6 @@
 <html>
 <head>
-        <link rel="stylesheet" type="text/css" href="pagination12.css">
+       <!-- <link rel="stylesheet" type="text/css" href="pagination12.css">-->
 </head>
 
 <body>
@@ -9,7 +9,59 @@
     
 
 <div id="ll">
-<div id="tabs" class="container">
+
+        <!--<div id="app">-->
+                <vue-tabs active-tab-color="#9b59b6" 
+                          active-text-color="white"
+                >
+                   <v-tab title="First tab" icon="ti-user">
+                     First tab content
+
+                     <button class="button" v-on:click="insert()">insert</button>
+                     <input v-model="name1" placeholder="edit me">
+                     <input v-model="phone1" placeholder="edit me">
+
+
+
+
+                     
+                   </v-tab>
+               
+                   <v-tab title="Second tab" icon="ti-settings">
+                     Second tab content
+                     <table>
+                            <tr v-for="k in table1">
+                            <td>{{k.name}}</td>
+                            <td>{{k.phone}}</td>
+                            </tr>
+                            </table>
+                            
+                            <button class="button"v-on:click="previous">previous</button>
+                            <button class="button"v-on:click="next">next</button>
+            
+                            <button class="button"v-on:click="bubbleSort">Sort</button>
+
+
+
+                   </v-tab>
+               
+                   <v-tab title="Third tab" icon="ti-check">
+                     Third tab content
+
+                     <input v-model="search1" placeholder="edit me">
+             <button class="button"v-on:click="search2">search</button>
+             <table>
+                <tr v-for="i in table2">
+                <td>{{i.name}}</td>
+                <td>{{i.phone}}</td>
+                </tr>
+                </table>
+
+                   </v-tab>
+               </vue-tabs>
+               
+              <!--</div>--> 
+<!--<div id="tabs" class="container">
   
     <div class="tabs">
        <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">Tab 1</a>
@@ -61,7 +113,7 @@
                
        </div>
 
-</div>
+</div> -->
 
 </div>
 </body>

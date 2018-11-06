@@ -1,0 +1,22 @@
+{
+  "name": "lydiaaf.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pagination12.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lydiaaf/lydiaaf.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lydiaaf/lydiaaf.github.io/issues"
+  },
+  "homepage": "https://github.com/lydiaaf/lydiaaf.github.io#readme",
+  "dependencies": {
+    "vue-nav-tabs": "^0.5.7"
+  }
+}
