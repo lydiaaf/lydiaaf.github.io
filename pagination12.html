@@ -1,13 +1,18 @@
 <html>
 <head>
        <!-- <link rel="stylesheet" type="text/css" href="pagination12.css">-->
-	   <link rel="stylesheet" href="node_modules\vue-nav-tabs\dist\vue-tabs.min.css">
+       <link rel="stylesheet" href="node_modules\vue-nav-tabs\dist\vue-tabs.min.css">
+       <link rel="stylesheet" href="node_modules\bootstrap/dist/css/bootstrap.css">
+     <!--  <link rel="stylesheet" href="node_modules\bootstrap-vue/dist/bootstrap-vue.css"> -->
+       <!--<link rel="stylesheet" href="node_modules\tachyons\css\tachyons.min.css"> -->
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+   <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+   <script type="module" src='@liqueflies/vue-grid'></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
     <script src=pagination12.js></script>
-    <script src="node_modules\vue-nav-tabs\dist\vue-tabs.js"></script>
+   <script src="node_modules\vue-nav-tabs\dist\vue-tabs.js"></script>
 
 <div id="ll">
 
@@ -31,7 +36,14 @@
                
                    <v-tab title="Second tab" icon="ti-settings">
                      Second tab content
-                     <table>
+                     
+                         <!--    <b-table striped hover :items="items"></b-table> 
+                         <container>
+                                <row>
+                                        <column> dgdfgs </column> 
+                                </row>
+                         </container> -->
+                    <table>
                             <tr v-for="k in table1">
                             <td>{{k.name}}</td>
                             <td>{{k.phone}}</td>
@@ -41,7 +53,7 @@
                             <button class="button"v-on:click="previous">previous</button>
                             <button class="button"v-on:click="next">next</button>
             
-                            <button class="button"v-on:click="bubbleSort">Sort</button>
+                            <button class="button"v-on:click="sort">Sort</button>
 
 
 

@@ -1,6 +1,13 @@
+
+// import  { vueGrid }  from '@liqueflies/vue-grid'
 window.onload = function () {
+/*var BootstrapVue = require('bootstrap-vue');
+ Vue.use(BootstrapVue);*/
+
+ //Vue.use(vueGrid.VueGrid, { /* your configuration */ })
 
   new Vue({
+    
     el: '#ll',
     data: {
       table: [
@@ -11,6 +18,7 @@ window.onload = function () {
         { name: 'Chuck Norris4', phone: 9001 },
         { name: 'Chuck Norris5', phone: 9002 }
       ],
+      met:true,
       search:'',
       search1:'',
       activetab: 1 ,
@@ -27,11 +35,35 @@ window.onload = function () {
 
 
     methods: {
-      bubbleSort: function(){
+      sort: function(){
+if(this.met){
+  this.bubbleSort1()
+  this.met=!this.met;
+}else{
+  this.bubbleSort2()
+  this.met=!this.met;
+}
+      },
+      bubbleSort1: function(){
         var len = this.table.length;
         for (var i = len-1; i>=0; i--){
           for(var j = 1; j<=i; j++){
             if(this.table[j-1].name.toUpperCase()>this.table[j].name.toUpperCase()){
+                var temp = this.table[j-1];
+                this.table[j-1] = this.table[j];
+                this.table[j] = temp;
+             }
+          }
+        }
+        console.log(this.table)
+        this.activepage=0
+        this.pagination()
+     },
+      bubbleSort2: function(){
+        var len = this.table.length;
+        for (var i = len-1; i>=0; i--){
+          for(var j = 1; j<=i; j++){
+            if(this.table[j-1].name.toUpperCase()<this.table[j].name.toUpperCase()){
                 var temp = this.table[j-1];
                 this.table[j-1] = this.table[j];
                 this.table[j] = temp;
