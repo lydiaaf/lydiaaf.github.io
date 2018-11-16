@@ -23,6 +23,21 @@ Vue.use(VueTabs)
 
 Vue.config.productionTip = false
 
-new Vue({
+const routes = [
+  { path: '/page1', component: page1 },
+  { path: '/page2', component: page2 },
+  { path: '/page3', component: page3 },
+
+  const router = new VueRouter({
+    routes 
+  })
+  const app = new Vue({
+    render: h => h(App),
+    router
+  }).$mount('#app')
+
+/*new Vue({
   render: h => h(App),
 }).$mount('#app')
+*/
+

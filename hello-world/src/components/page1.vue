@@ -1,9 +1,9 @@
 
 
 <template>
-                        <b-button class="button" v-on:click="insert()">insert</b-button>
-                         <input v-model="name1" placeholder="edit me">
-                     <input v-model="phone1" placeholder="edit me">
+                <b-button class="button" v-on:click="insert()">insert</b-button>
+                <input v-model="name1" placeholder="edit me">
+                <input v-model="phone1" placeholder="edit me">
                      
 
     </template>       

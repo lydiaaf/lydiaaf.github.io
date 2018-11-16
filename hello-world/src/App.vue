@@ -6,9 +6,9 @@
     <button v-on:click="C:\Users\LYDIA\Documents\hello-world\src\components\page2.vue">tab 2</button>
     <button v-on:click="C:\Users\LYDIA\Documents\hello-world\src\components\page3.vue">tab 3</button>
 
-    <router-link to="/page1.vue">Go to Foo</router-link>
-    <router-link to="/page2.vue">Go to Bar</router-link>
-    <router-link to="/page3.vue">Go to Bar</router-link>
+    <router-link to="/page1">Go to Foo</router-link>
+    <router-link to="/page2">Go to Bar</router-link>
+    <router-link to="/page3">Go to Bar</router-link>
     <router-view></router-view>
 
   </div>
@@ -23,7 +23,7 @@ import page3 from './components/page3.vue'
 export default {
   name: 'app',
   components: {
-    page12,
+   
     page1,
     page2,
     page3
