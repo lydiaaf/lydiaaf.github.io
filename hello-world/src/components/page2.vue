@@ -10,9 +10,9 @@
                             </tr>
                             </table>
 
-                             <b-button class="button"v-on:click="previous">previous</b-button>
-                             <b-button class="button"v-on:click="next">next</b-button>
-                             <b-button class="button"v-on:click="sort">Sort</b-button>
+                             <b-button class="button" v-on:click="previous">previous</b-button>
+                             <b-button class="button" v-on:click="next">next</b-button>
+                             <b-button class="button" v-on:click="sort">Sort</b-button>
                              <router-view></router-view>
 
                              </template>
@@ -49,6 +49,7 @@
         { name: 'Chuck Norris4', phone: 9001 },
         { name: 'Chuck Norris5', phone: 9002 }
       ],
+                               table1 : [],
                                activepage: 0,
                                maxpages: ''
 }
