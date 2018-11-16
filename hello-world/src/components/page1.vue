@@ -48,6 +48,7 @@ export default {
       x: '',
       }
     },
+    methods: {
 insert() {
          this.ex = false
         var person = { name: this.name1, phone: this.phone1 };
@@ -63,5 +64,6 @@ insert() {
           console.log(this.maxsize);
         }
       }
+    }
 }
     </script>          

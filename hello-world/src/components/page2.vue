@@ -50,9 +50,10 @@
         { name: 'Chuck Norris5', phone: 9002 }
       ],
                                activepage: 0,
-                               maxpages: 
+                               maxpages: ''
 }
-    }
+    },
+    methods: {
  previous() {
         if (this.activepage > 0) {
           this.activepage--
@@ -105,5 +106,6 @@
         }
         console.log(this.rows);
       }
+                            }
 }
                              </script>

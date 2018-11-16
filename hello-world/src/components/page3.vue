@@ -46,8 +46,9 @@
         { name: 'Chuck Norris5', phone: 9002 }
       ],
                   table2: [],
-
+}
     },
+    methods: {
                 search2(){
         this.table2=[];
       for(const i of this.table){
@@ -58,5 +59,6 @@
       }
      }
                 }
+                
                 }
                 </script>
