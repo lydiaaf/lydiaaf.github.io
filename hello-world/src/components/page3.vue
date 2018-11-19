@@ -1,5 +1,6 @@
 
                    <template>
+                   <div>
                      <input v-model="search1" placeholder="edit me">
                      <b-button class="button"v-on:click="search2">search</b-button>
              <table align="center">
@@ -9,7 +10,7 @@
                 </tr>
                 </table>
                 <router-view></router-view>
-
+</div>
                 </template>
 
                 <script>
@@ -46,6 +47,8 @@
         { name: 'Chuck Norris5', phone: 9002 }
       ],
                   table2: [],
+                  search:'',
+                  search1:''
 }
     },
     methods: {

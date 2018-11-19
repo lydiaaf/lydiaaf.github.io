@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <!--<img alt="Vue logo" src="./assets/logo.png"> -->
-    <page12 msg="Welcome to Your Vue.js App"/>
-    <button v-on:click="C:\Users\LYDIA\Documents\hello-world\src\components\page1.vue">tab 1</button>
-    <button v-on:click="C:\Users\LYDIA\Documents\hello-world\src\components\page2.vue">tab 2</button>
-    <button v-on:click="C:\Users\LYDIA\Documents\hello-world\src\components\page3.vue">tab 3</button>
+    <!--<page1 msg="Welcome to Your Vue.js App"/> -->
+    
 
-    <router-link to="/page1">Go to Foo</router-link>
-    <router-link to="/page2">Go to Bar</router-link>
-    <router-link to="/page3">Go to Bar</router-link>
+    <router-link to="/page1">tab 1</router-link>
+    <br>
+    <router-link to="/page2">tab 2</router-link>
+    <br>
+    <router-link to="/page3">tab 3</router-link>
     <router-view></router-view>
 
   </div>
@@ -26,10 +26,31 @@ export default {
    
     page1,
     page2,
-    page3
-    
+    page3},
+    data () {
+                               return{
+columns: [
+          {
+            name: "name"
+          },{
+            name: "phone"
+          }
+        ],
+        rows: [
+          {
+            name: "Robert Duvak",
+            phone: "jose26"
+          },{
+            name: "Isabelle Champion",
+            phone: "isa"
+          },{
+            name: "Alberto Tulador",
+            phone: "beber"
+          }
+        ]
+                               }
+  },
 
-  }
 }
 </script>
 

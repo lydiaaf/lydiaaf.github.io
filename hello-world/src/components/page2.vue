@@ -1,6 +1,6 @@
 
 <template>
-
+<div>
 <vue-table class="table-bordered" :columns="columns" :rows="rows"></vue-table>
   
                     <table align="center">
@@ -14,7 +14,7 @@
                              <b-button class="button" v-on:click="next">next</b-button>
                              <b-button class="button" v-on:click="sort">Sort</b-button>
                              <router-view></router-view>
-
+</div>
                              </template>
                              <script>
                             export default {
@@ -28,7 +28,7 @@
             name: "phone"
           }
         ],
-        rows: [
+       /* rows: [
           {
             name: "Robert Duvak",
             phone: "jose26"
@@ -39,8 +39,8 @@
             name: "Alberto Tulador",
             phone: "beber"
           }
-        ]
-       ,
+        ]*/
+       
                                table: [
         { name: 'Chuck Norris', phone: 9000 },
         { name: 'Chuck Norris1', phone: 9001 },
@@ -55,6 +55,45 @@
 }
     },
     methods: {
+            sort(){
+if(this.met){
+  this.bubbleSort1()
+  this.met=!this.met;
+}else{
+  this.bubbleSort2()
+  this.met=!this.met;
+}
+      },
+      bubbleSort1(){
+        var len = this.rows.length;
+        for (var i = len-1; i>=0; i--){
+          for(var j = 1; j<=i; j++){
+            if(this.rows[j-1].name.toUpperCase()>this.rows[j].name.toUpperCase()){
+                var temp = this.rows[j-1];
+                this.rows[j-1] = this.rows[j];
+                this.rows[j] = temp;
+             }
+          }
+        }
+        console.log(this.rows)
+        this.activepage=0
+        this.pagination()
+     },
+      bubbleSort2(){
+        var len = this.rows.length;
+        for (var i = len-1; i>=0; i--){
+          for(var j = 1; j<=i; j++){
+            if(this.rows[j-1].name.toUpperCase()<this.rows[j].name.toUpperCase()){
+                var temp = this.rows[j-1];
+                this.rows[j-1] = this.rows[j];
+                this.rows[j] = temp;
+             }
+          }
+        }
+        console.log(this.rows)
+        this.activepage=0
+        this.pagination()
+     },
  previous() {
         if (this.activepage > 0) {
           this.activepage--
@@ -92,9 +131,8 @@
           this.activepage++;
           this.pagination();
         }
-      },
-
-      pagination() {
+      },     
+     pagination() {
         var activepage = this.activepage
        
        this.rows=[]

@@ -1,11 +1,12 @@
 
 
 <template>
+<div>
                 <b-button class="button" v-on:click="insert()">insert</b-button>
                 <input v-model="name1" placeholder="edit me">
                 <input v-model="phone1" placeholder="edit me">
                      
-
+</div>
     </template>       
 
     <script>

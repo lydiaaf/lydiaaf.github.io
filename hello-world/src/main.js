@@ -16,9 +16,12 @@ Vue.component("vue-table", VueTable);
 //Vue.use(MButton)
 
 //Vue.use('vue-table', VueTable)
+import Vuex from 'vuex' 
+import page1 from './components/page1.vue'
+import page2 from './components/page2.vue'
+import page3 from './components/page3.vue'
 
-
-
+Vue.use(Vuex)
 Vue.use(VueTabs)
 
 Vue.config.productionTip = false
