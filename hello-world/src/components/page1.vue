@@ -5,7 +5,9 @@
                 <b-button class="button" v-on:click="insert()">insert</b-button>
                 <input v-model="name1" placeholder="edit me">
                 <input v-model="phone1" placeholder="edit me">
-                     
+                <input on-click="checkbox" name="check" type="checkbox" v-model="value"> 
+                <span>Checked names: {{ value }}</span>
+                <router-view></router-view>
 </div>
     </template>       
 
@@ -42,14 +44,26 @@ export default {
         { name: 'Chuck Norris4', phone: 9001 },
         { name: 'Chuck Norris5', phone: 9002 }
       ],
+      value: [],
       ex: false,
       maxsize: 0,
       name1: '',
       phone1: '',
       x: '',
+      y: ''
       }
     },
     methods: {
+      checkbox(){
+        var status = false 
+        for (i = 0; i < value.length; i++) {
+        if value[i] == 'check' {
+        status = true }elese
+        {status = false}
+        }                       
+      }
+      //store.commit('checkChange', status)
+      ,
 insert() {
          this.ex = false
         var person = { name: this.name1, phone: this.phone1 };

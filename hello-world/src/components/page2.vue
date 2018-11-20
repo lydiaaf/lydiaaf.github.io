@@ -13,6 +13,8 @@
                              <b-button class="button" v-on:click="previous">previous</b-button>
                              <b-button class="button" v-on:click="next">next</b-button>
                              <b-button class="button" v-on:click="sort">Sort</b-button>
+                             <input on-click="checkbox" name="check" type="checkbox" v-model="value"> 
+                             <span>Checked names: {{ value }}</span>
                              <router-view></router-view>
 </div>
                              </template>
@@ -51,39 +53,37 @@
       ],
                                table1 : [],
                                activepage: 0,
-                               maxpages: ''
+                               maxpages: '',
+                               met: true
 }
     },
     methods: {
+      checkbox(){
+        var status = false 
+        for (i = 0; i < value.length; i++) {
+        if value[i] == 'check' {
+        status = true }elese
+        {status = false}
+        }                       
+      },
             sort(){
-if(this.met){
+
   this.bubbleSort1()
   this.met=!this.met;
-}else{
-  this.bubbleSort2()
-  this.met=!this.met;
-}
+  
       },
       bubbleSort1(){
-        var len = this.rows.length;
+              var len = this.rows.length;
         for (var i = len-1; i>=0; i--){
           for(var j = 1; j<=i; j++){
+            if (met){
             if(this.rows[j-1].name.toUpperCase()>this.rows[j].name.toUpperCase()){
                 var temp = this.rows[j-1];
                 this.rows[j-1] = this.rows[j];
                 this.rows[j] = temp;
              }
-          }
-        }
-        console.log(this.rows)
-        this.activepage=0
-        this.pagination()
-     },
-      bubbleSort2(){
-        var len = this.rows.length;
-        for (var i = len-1; i>=0; i--){
-          for(var j = 1; j<=i; j++){
-            if(this.rows[j-1].name.toUpperCase()<this.rows[j].name.toUpperCase()){
+             }else {
+                if(this.rows[j-1].name.toUpperCase()<this.rows[j].name.toUpperCase()){
                 var temp = this.rows[j-1];
                 this.rows[j-1] = this.rows[j];
                 this.rows[j] = temp;
@@ -93,6 +93,7 @@ if(this.met){
         console.log(this.rows)
         this.activepage=0
         this.pagination()
+        }
      },
  previous() {
         if (this.activepage > 0) {

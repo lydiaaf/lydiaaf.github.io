@@ -9,6 +9,8 @@
                 <td>{{i.phone}}</td>
                 </tr>
                 </table>
+                <input on-click="checkbox" name="check" type="checkbox" v-model="value"> 
+                <span>Checked names: {{ value }}</span>
                 <router-view></router-view>
 </div>
                 </template>
@@ -52,6 +54,14 @@
 }
     },
     methods: {
+      checkbox(){
+        var status = false 
+        for (i = 0; i < value.length; i++) {
+        if value[i] == 'check' {
+        status = true }elese
+        {status = false}
+        }                       
+      },
                 search2(){
         this.table2=[];
       for(const i of this.table){

@@ -36,7 +36,8 @@ const routes = [
   })
   const app = new Vue({
     render: h => h(App),
-    router
+    router,
+    Vuex
   }).$mount('#app')
 
 /*new Vue({

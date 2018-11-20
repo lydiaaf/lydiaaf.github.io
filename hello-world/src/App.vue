@@ -5,9 +5,9 @@
     
 
     <router-link to="/page1">tab 1</router-link>
-    <br>
+    
     <router-link to="/page2">tab 2</router-link>
-    <br>
+    
     <router-link to="/page3">tab 3</router-link>
     <router-view></router-view>
 
@@ -50,7 +50,16 @@ columns: [
         ]
                                }
   },
+methods: {
 
+check1(){
+
+
+
+}
+
+
+}
 }
 </script>
 
